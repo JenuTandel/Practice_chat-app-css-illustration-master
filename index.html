@@ -12,6 +12,11 @@
       href="assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/8a46a6443f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Frontend Mentor | [Challenge Name Here]</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,41 +31,100 @@
     </style>
   </head>
   <body>
-    <div class="d-flex h-100 w-100 justify-content-between">
-      <div class="left-background-area"></div>
-      <div class="mobile">
-        <div class="mobile-background">
+    <div class="wrapper h-100 w-100">
+      <div class="left-background-area">
+        <div class="mobile">
+          <div class="mobile-background w-100 h-100">
+            <span class="white-box"></span>
+            <!-- start: profile-wrapper -->
+            <div class="profile-wrapper">
+              <div
+                class="d-flex justify-content-between align-items-center mt-3 p-1"
+              >
+                <div
+                  class="profile-wrapper-data d-flex align-items-center justify-content-between"
+                >
+                  <span class="icon fa-solid fa-angle-left"></span>
+                  <div class="profile">
+                    <img src="assets/images/avatar.jpg" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <span class="name">Samuel Green</span>
+                    <span>Available to Walk</span>
+                  </div>
+                </div>
+                <span class="icon fa-solid fa-ellipsis-vertical"></span>
+              </div>
+            </div>
+            <!-- end: profile-wrapper -->
+            <!-- start: chat -->
+            <div class="d-flex flex-column p-1 w-100">
+              <div class="left-chat-box">
+                <p>That sounds great. I’d be happy with that.</p>
+              </div>
+              <div class="left-chat-box">
+                <p>Could you send over some pictures of your dog, please?</p>
+              </div>
+              <!-- start: images in chat -->
+              <div class="chat-images d-flex justify-content-end">
+                <div class="image-wrapper">
+                  <img src="assets/images/dog-image-1.jpg" />
+                </div>
+                <div class="image-wrapper">
+                  <img src="assets/images/dog-image-2.jpg" />
+                </div>
+                <div class="image-wrapper">
+                  <img src="assets/images/dog-image-3.jpg" />
+                </div>
+              </div>
+              <!-- end: images in chat -->
+              <div class="d-flex justify-content-end">
+                <div class="right-chat-box">
+                  <p>Here are a few pictures. She’s a happy girl!</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div class="right-chat-box">
+                  <p>Can you make it?</p>
+                </div>
+              </div>
+              <div class="left-chat-box">
+                <p>
+                  She looks so happy! The time we discussed works. How long
+                  shall I take her out for?
+                </p>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between notification-wrapper p-1"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="icon fa-regular fa-circle"></span>
+                  <p>30 minute walk</p>
+                </div>
+                <span>$29</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between notification-wrapper p-1"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="icon fa-regular fa-circle"></span>
+                  <p>1 hour walk</p>
+                </div>
+                <span>$49</span>
+              </div>
+              <div class="message-box">
+                <input type="text" placeholder="Type a message..." />
+                <span class="fa-solid fa-circle-chevron-right"></span>
+              </div>
+            </div>
 
+            <!-- end: chat -->
+          </div>
         </div>
       </div>
+
       <div class="right-background-area"></div>
     </div>
-    <!-- Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat. -->
 
     <div class="attribution">
       Challenge by

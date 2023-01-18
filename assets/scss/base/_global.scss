@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 // Global Classes
 
 * {
@@ -10,7 +11,9 @@ body,
 html {
     height: 100%;
     width: 100%;
-    background-color: #fafafa
+    background-color: #fafafa;
+    font-family: 'Rubik', sans-serif;
+
 }
 
 // Helper classes
@@ -27,6 +30,18 @@ html {
     justify-content: space-between;
 }
 
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 .h-100 {
     height: 100%;
 }
@@ -35,40 +50,217 @@ html {
     width: 100%
 }
 
+.mt-3 {
+    margin-top: 15px;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
 // main
 
 .left-background-area {
-    width: 50%;
-    height: 90%;
-    margin-left: -20%;
-    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.right-background-area {
-    width: 30%;
-    height: 90%;
-    margin-top: 175px;
-    background-color: hsl(270, 20%, 96%);
-    border-top-left-radius: 50%;
-    margin-right: -8%;
+.left-background-area:before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 100%/0 0 65% 118%;
+    margin-left: -35%;
 }
+
+.icon {
+    font-size: 12px;
+}
+
+
+// .right-background-area {
+//     width: 30%;
+//     height: 90%;
+//     background-color: hsl(270, 20%, 96%);
+//     border-top-left-radius: 50%;
+//     margin-right: -8%;
+// }
 
 .mobile {
-    height: 550px;
     width: 280px;
     background-color: white;
     position: absolute;
     top: 165px;
-    left: 365px;
-    border-radius: 20px;
+    left: 400px;
+    border-radius: 30px;
     padding: 12px;
 
     &-background {
         height: 100%;
         width: 100%;
-        background-color:hsl(270, 20%, 96%) ;
+        background-color: hsl(270, 20%, 96%);
         border-radius: 20px;
+
+        .profile-wrapper {
+            background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: 5px;
+            color: white;
+
+            &-data {
+                width: 130px;
+            }
+
+            .profile {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid white;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                +div {
+                    .name {
+                        font-size: 12px;
+                        font-weight: 400;
+                        margin-bottom: 2px;
+                        opacity: 80%;
+
+                    }
+
+                    span+span {
+                        font-size: 8px;
+                        font-weight: 300;
+                        opacity: 50%;
+                    }
+                }
+            }
+        }
     }
+
+    .white-box {
+        height: 30px;
+        width: 50%;
+        position: absolute;
+        top: 20px;
+        border-radius: 14px;
+        background-color: white;
+        margin-left: 55px;
+        margin-top: -18px;
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left-chat-box {
+    background-color: #ede5f4;
+    color: hsl(276, 55%, 52%);
+    font-size: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    width: 135px;
+    font-weight: 500;
+    line-height: 12px;
+    margin-top: 10px;
+}
+
+.left-chat-box:first-child {
+    margin: 0;
+}
+
+.chat-images {
+    margin-top: 14px;
+
+    .image-wrapper {
+        margin-left: 10px;
+        height: 45px;
+        width: 45px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.right-chat-box {
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    font-size: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    border-bottom-right-radius: 5px;
+    width: 135px;
+    font-weight: 500;
+    line-height: 12px;
+    margin-top: 10px;
+}
+
+.notification-wrapper {
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    color: white;
+    width: 180px;
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    margin-top: 10px;
+
+    .icon {
+        font-weight: 100;
+        opacity: 20%;
+    }
+
+    p {
+        font-size: 8px;
+        margin-left: 5px;
+
+    }
+
+    span {
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 4px;
+    }
+}
+
+.message-box {
+    position: relative;
+    input {
+        background-color: white;
+        padding: 10px;
+        width: 100%;
+        margin-top: 10px;
+        border: none;
+        border-radius: 50px;
+    }
+
+    input::placeholder {
+        color: hsl(206, 6%, 79%);
+        font-size: 10px;
+    }
+
+    input+span {
+        position: absolute;
+        top:15px;
+        right: 8px;
+        font-size: 25px;
+    }
+
 }
