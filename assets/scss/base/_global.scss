@@ -62,47 +62,26 @@ html {
     padding: 10px;
 }
 
-// main
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    @media (max-width:576px) {
-        grid-template-columns: 100%;
-    }
-}
-// start: left side design
-
-.left-background-area {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.left-background-area:before {
-    content: "";
-    position: absolute;
-    top: -10%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    border-radius: 100%/0 0 65% 118%;
-    margin-left: -40%;
-}
-
 .icon {
     font-size: 12px;
 }
 
+//wrapper class
+.wrapper{
+    
+    @media (max-width:576px) {
+        flex-direction: column;
+    }
+}
+
+// Mobile Phone classes
 .mobile {
-    width: 280px;
+    min-width: 280px;
     background-color: white;
-    position: absolute;
-    top: 165px;
-    left: 365px;
+    position: relative;
     border-radius: 30px;
     padding: 12px;
+    margin-left: -20%;
     box-shadow: 8px 48px 35px -10px rgba(214, 206, 219, 0.6);
 
 
@@ -314,6 +293,7 @@ html {
         background: white;
     }
 }
+
 .container:hover input~.check {
     background-color: hsl(289, 100%, 72%);
 }
@@ -322,44 +302,51 @@ html {
     display: block;
 }
 
-// end: left side design
 
-//start: right side design
-.right-background-area {
+
+//Left side background
+.left-side {
+    width: 40%;
+    background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-bottom-left-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    transform: translateX(-18%);
+    height: 85%;
+}
+
+//Right side area
+.right-side {
+    background-color: #fafafa;
+}
+
+.right-content {
+    max-width: 470px;
     width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+    margin: auto;
+    z-index: 200;
 
-    .right-content {
-        width: 470px;
-        position: absolute;
+    h1 {
+        color: hsl(271, 36%, 24%);
+        font-size: 40px;
+        font-weight: 500;
+    }
 
-        h1 {
-            color: hsl(271, 36%, 24%);
-            font-size: 40px;
-            font-weight: 500;
-        }
-
-        P {
-            margin-top: 20px;
-            line-height: 30px;
-            font-size: 17px;
-            font-weight: 400;
-            color: hsl(270, 7%, 64%);
-        }
+    P {
+        margin-top: 20px;
+        line-height: 30px;
+        font-size: 17px;
+        font-weight: 400;
+        color: hsl(270, 7%, 64%);
     }
 }
 
-.right-background-area:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.right-side-area {
     background-color: hsl(270, 20%, 96%);
-    border-radius: 100%/70% 50% 0 0;
-    margin-left: 400px;
-    margin-top: 150px;
+    width: 40%;
+    margin-top: 20%;
+    height: 100%;
+    position: absolute;
+    right: -20%;
+    border-top-left-radius: 50rem;
+    border-top-right-radius: 50rem;
 }
-
-//end: right side design
