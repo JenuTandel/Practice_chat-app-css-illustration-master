@@ -94,12 +94,15 @@
                   shall I take her out for?
                 </p>
               </div>
+              <!-- start: radio button -->
               <div
                 class="d-flex align-items-center justify-content-between notification-wrapper p-1"
               >
                 <div class="d-flex align-items-center">
-                  <span class="icon fa-regular fa-circle"></span>
-                  <p>30 minute walk</p>
+                  <label class="container">
+                    <input type="radio" value="30 minute walk" name="time" />30
+                    minute Walk<span class="check"></span>
+                  </label>
                 </div>
                 <span>$29</span>
               </div>
@@ -107,23 +110,38 @@
                 class="d-flex align-items-center justify-content-between notification-wrapper p-1"
               >
                 <div class="d-flex align-items-center">
-                  <span class="icon fa-regular fa-circle"></span>
-                  <p>1 hour walk</p>
+                  <label class="container">
+                    <input type="radio" value="30 minute walk" name="time" />1
+                    hour Walk<span class="check"></span>
+                  </label>
                 </div>
                 <span>$49</span>
               </div>
               <div class="message-box">
                 <input type="text" placeholder="Type a message..." />
-                <span class="fa-solid fa-circle-chevron-right"></span>
+                <div
+                  class="btn-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <span class="fa-solid fa-angle-right"></span>
+                </div>
               </div>
             </div>
-
             <!-- end: chat -->
           </div>
         </div>
       </div>
 
-      <div class="right-background-area"></div>
+      <div class="right-background-area h-100">
+        <div class="right-content d-flex flex-column justify-content-center h-100">
+          <h1>Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been complteed you can rate walk and book again all through
+            the chat.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="attribution">

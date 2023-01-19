@@ -34,6 +34,10 @@ html {
     align-items: center;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
 .justify-content-end {
     justify-content: flex-end;
 }
@@ -59,6 +63,15 @@ html {
 }
 
 // main
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width:576px) {
+        grid-template-columns: 100%;
+    }
+}
+// start: left side design
 
 .left-background-area {
     width: 100%;
@@ -75,30 +88,23 @@ html {
     height: 100%;
     background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     border-radius: 100%/0 0 65% 118%;
-    margin-left: -35%;
+    margin-left: -40%;
 }
 
 .icon {
     font-size: 12px;
 }
 
-
-// .right-background-area {
-//     width: 30%;
-//     height: 90%;
-//     background-color: hsl(270, 20%, 96%);
-//     border-top-left-radius: 50%;
-//     margin-right: -8%;
-// }
-
 .mobile {
     width: 280px;
     background-color: white;
     position: absolute;
     top: 165px;
-    left: 400px;
+    left: 365px;
     border-radius: 30px;
     padding: 12px;
+    box-shadow: 8px 48px 35px -10px rgba(214, 206, 219, 0.6);
+
 
     &-background {
         height: 100%;
@@ -162,11 +168,6 @@ html {
     }
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .left-chat-box {
     background-color: #ede5f4;
     color: hsl(276, 55%, 52%);
@@ -174,6 +175,19 @@ html {
     padding: 8px;
     border-radius: 10px;
     border-bottom-left-radius: 5px;
+    width: 135px;
+    font-weight: 500;
+    line-height: 12px;
+    margin-top: 10px;
+}
+
+.right-chat-box {
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    font-size: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    border-bottom-right-radius: 5px;
     width: 135px;
     font-weight: 500;
     line-height: 12px;
@@ -199,19 +213,6 @@ html {
             width: 100%;
         }
     }
-}
-
-.right-chat-box {
-    background-color: white;
-    color: hsl(271, 15%, 43%);
-    font-size: 8px;
-    padding: 8px;
-    border-radius: 10px;
-    border-bottom-right-radius: 5px;
-    width: 135px;
-    font-weight: 500;
-    line-height: 12px;
-    margin-top: 10px;
 }
 
 .notification-wrapper {
@@ -242,9 +243,10 @@ html {
 
 .message-box {
     position: relative;
+
     input {
         background-color: white;
-        padding: 10px;
+        padding: 12px;
         width: 100%;
         margin-top: 10px;
         border: none;
@@ -256,11 +258,108 @@ html {
         font-size: 10px;
     }
 
-    input+span {
+    .btn-wrapper {
+        border-radius: 50%;
+        background-color: hsl(271, 36%, 24%);
+        height: 30px;
+        width: 30px;
         position: absolute;
-        top:15px;
-        right: 8px;
-        font-size: 25px;
+        top: 14px;
+        right: 6px;
+
+        span {
+            font-size: 16px;
+            color: white;
+        }
     }
 
 }
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    font-size: 8px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    input:checked~.check {
+        background-color: hsl(289, 100%, 72%);
+    }
+
+    .check {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        height: 14px;
+        width: 14px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px hsl(289, 100%, 72%) solid;
+    }
+
+    .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 3px;
+        left: 3px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: white;
+    }
+}
+.container:hover input~.check {
+    background-color: hsl(289, 100%, 72%);
+}
+
+.container input:checked~.check:after {
+    display: block;
+}
+
+// end: left side design
+
+//start: right side design
+.right-background-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .right-content {
+        width: 470px;
+        position: absolute;
+
+        h1 {
+            color: hsl(271, 36%, 24%);
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        P {
+            margin-top: 20px;
+            line-height: 30px;
+            font-size: 17px;
+            font-weight: 400;
+            color: hsl(270, 7%, 64%);
+        }
+    }
+}
+
+.right-background-area:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 100%/70% 50% 0 0;
+    margin-left: 400px;
+    margin-top: 150px;
+}
+
+//end: right side design
