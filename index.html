@@ -1,51 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/8a46a6443f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Samuel Green
-  Available to Walk
-
-  That sounds great. I’d be happy with that.
-
-  Could you send over some pictures of your dog, please?
-
-  Here are a few pictures. She’s a happy girl!
-
-  Can you make it?
-
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex h-100">
+      <div class="right-side w-100 d-flex align-items-center">
+        <div class="left-side h-100"></div>
+        <div class="mobile">
+          <div class="mobile-background w-100 h-100">
+            <span class="white-box"></span>
+            <!-- start: profile-wrapper -->
+            <div class="profile-wrapper">
+              <div
+                class="d-flex justify-content-between align-items-center mt-3 p-1"
+              >
+                <div
+                  class="profile-wrapper-data d-flex align-items-center justify-content-between"
+                >
+                  <span class="icon fa-solid fa-angle-left"></span>
+                  <div class="profile">
+                    <img src="./assets/images/avatar.jpg" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <span class="name">Samuel Green</span>
+                    <span>Available to Walk</span>
+                  </div>
+                </div>
+                <span class="icon fa-solid fa-ellipsis-vertical"></span>
+              </div>
+            </div>
+            <!-- end: profile-wrapper -->
+            <!-- start: chat -->
+            <div class="d-flex flex-column p-1 w-100">
+              <div class="left-chat-box">
+                <p>That sounds great. I’d be happy with that.</p>
+              </div>
+              <div class="left-chat-box">
+                <p>Could you send over some pictures of your dog, please?</p>
+              </div>
+              <!-- start: images in chat -->
+              <div class="chat-images d-flex justify-content-end">
+                <div class="image-wrapper">
+                  <img src="./assets/images/dog-image-1.jpg" />
+                </div>
+                <div class="image-wrapper">
+                  <img src="./assets/images/dog-image-2.jpg" />
+                </div>
+                <div class="image-wrapper">
+                  <img src="./assets/images/dog-image-3.jpg" />
+                </div>
+              </div>
+              <!-- end: images in chat -->
+              <div class="d-flex justify-content-end">
+                <div class="right-chat-box">
+                  <p>Here are a few pictures. She’s a happy girl!</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div class="right-chat-box">
+                  <p>Can you make it?</p>
+                </div>
+              </div>
+              <div class="left-chat-box">
+                <p>
+                  She looks so happy! The time we discussed works. How long
+                  shall I take her out for?
+                </p>
+              </div>
+              <!-- start: radio button -->
+              <div
+                class="d-flex align-items-center justify-content-between notification-wrapper"
+              >
+                <div class="d-flex align-items-center">
+                  <label class="container">
+                    <input type="radio" value="30 minute walk" name="time" />30
+                    minute Walk<span class="check"></span>
+                  </label>
+                </div>
+                <span>$29</span>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between notification-wrapper"
+              >
+                <div class="d-flex align-items-center">
+                  <label class="container">
+                    <input type="radio" value="30 minute walk" name="time" />1
+                    hour Walk<span class="check"></span>
+                  </label>
+                </div>
+                <span>$49</span>
+              </div>
+              <div class="message-box">
+                <input type="text" placeholder="Type a message..." />
+                <div
+                  class="btn-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <span class="fa-solid fa-angle-right"></span>
+                </div>
+              </div>
+            </div>
+            <!-- end: chat -->
+          </div>
+        </div>
+        <div class="right-content">
+          <h1>Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been complteed you can rate walk and book again all through
+            the chat.
+          </p>
+        </div>
+        <div class="right-side-area"></div>
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jinal Tandel</a>.
+    </div>
+  </body>
 </html>
