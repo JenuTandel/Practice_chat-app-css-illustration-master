@@ -8,7 +8,7 @@
 body,
 html {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   background-color: #fafafa;
   font-family: "Rubik", sans-serif;
 }
@@ -61,20 +61,20 @@ html {
   font-size: 12px;
 }
 
-@media (max-width: 576px) {
-  .wrapper {
-    flex-direction: column;
-  }
-}
-
 .mobile {
-  min-width: 280px;
+  min-width: 270px;
   background-color: white;
   position: relative;
   border-radius: 30px;
   padding: 12px;
-  margin-left: -20%;
+  z-index: 200;
   box-shadow: 8px 48px 35px -10px rgba(214, 206, 219, 0.6);
+}
+@media (max-width: 768px) {
+  .mobile {
+    min-width: 250px;
+    padding: 10px;
+  }
 }
 .mobile-background {
   height: 100%;
@@ -90,6 +90,11 @@ html {
   border-bottom-right-radius: 7px;
   padding: 5px;
   color: white;
+}
+@media (max-width: 768px) {
+  .mobile-background .profile-wrapper {
+    padding: 2px;
+  }
 }
 .mobile-background .profile-wrapper-data {
   width: 130px;
@@ -117,14 +122,14 @@ html {
   opacity: 50%;
 }
 .mobile .white-box {
-  height: 30px;
+  height: 28px;
   width: 50%;
   position: absolute;
   top: 20px;
   border-radius: 14px;
   background-color: white;
   margin-left: 55px;
-  margin-top: -18px;
+  margin-top: -20px;
 }
 
 .left-chat-box {
@@ -137,7 +142,13 @@ html {
   width: 135px;
   font-weight: 500;
   line-height: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .left-chat-box {
+    padding: 6px;
+    width: 125px;
+  }
 }
 
 .right-chat-box {
@@ -150,7 +161,13 @@ html {
   width: 135px;
   font-weight: 500;
   line-height: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .right-chat-box {
+    padding: 6px;
+    width: 130px;
+  }
 }
 
 .left-chat-box:first-child {
@@ -167,6 +184,12 @@ html {
   border-radius: 10px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .chat-images .image-wrapper {
+    height: 40px;
+    width: 40px;
+  }
+}
 .chat-images .image-wrapper img {
   height: 100%;
   width: 100%;
@@ -179,6 +202,12 @@ html {
   border-radius: 10px;
   border-bottom-left-radius: 5px;
   margin-top: 10px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .notification-wrapper {
+    padding: 8px;
+  }
 }
 .notification-wrapper .icon {
   font-weight: 100;
@@ -205,6 +234,11 @@ html {
   border: none;
   border-radius: 50px;
 }
+@media (max-width: 768px) {
+  .message-box input {
+    padding: 10px;
+  }
+}
 .message-box input::placeholder {
   color: hsl(206deg, 6%, 79%);
   font-size: 10px;
@@ -218,8 +252,16 @@ html {
   top: 14px;
   right: 6px;
 }
+@media (max-width: 768px) {
+  .message-box .btn-wrapper {
+    height: 24px;
+    width: 24px;
+    top: 15px;
+    right: 6px;
+  }
+}
 .message-box .btn-wrapper span {
-  font-size: 16px;
+  font-size: 12px;
   color: white;
 }
 
@@ -274,22 +316,79 @@ html {
   border-bottom-right-radius: 50rem;
   transform: translateX(-18%);
   height: 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .left-side {
+    height: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .left-side {
+    height: 75%;
+    transform: translateX(-37%);
+  }
+}
+@media (max-width: 576px) {
+  .left-side {
+    width: 75%;
+    height: 60%;
+    transform: translateX(-30%);
+    border-bottom-left-radius: 0rem;
+  }
 }
 
 .right-side {
   background-color: #fafafa;
+  padding-left: 210px;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .right-side {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .right-side {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .right-side {
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
 
 .right-content {
   max-width: 470px;
   width: 100%;
-  margin: auto;
+  margin-left: 100px;
   z-index: 200;
+}
+@media (max-width: 1024px) {
+  .right-content {
+    max-width: 350px;
+    margin-left: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .right-content {
+    margin-left: 0;
+    width: 90%;
+  }
 }
 .right-content h1 {
   color: hsl(271deg, 36%, 24%);
   font-size: 40px;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .right-content h1 {
+    text-align: center;
+  }
 }
 .right-content P {
   margin-top: 20px;
@@ -298,16 +397,26 @@ html {
   font-weight: 400;
   color: hsl(270deg, 7%, 64%);
 }
+@media (max-width: 768px) {
+  .right-content P {
+    text-align: center;
+  }
+}
 
 .right-side-area {
   background-color: hsl(270deg, 20%, 96%);
-  width: 40%;
-  margin-top: 20%;
-  height: 100%;
+  width: 20%;
+  height: 85%;
   position: absolute;
-  right: -20%;
+  right: 0;
+  bottom: 0;
   border-top-left-radius: 50rem;
-  border-top-right-radius: 50rem;
+}
+@media (max-width: 576px) {
+  .right-side-area {
+    width: 40%;
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,7 +10,7 @@
 body,
 html {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     background-color: #fafafa;
     font-family: 'Rubik', sans-serif;
 
@@ -66,24 +66,20 @@ html {
     font-size: 12px;
 }
 
-//wrapper class
-.wrapper{
-    
-    @media (max-width:576px) {
-        flex-direction: column;
-    }
-}
-
 // Mobile Phone classes
 .mobile {
-    min-width: 280px;
+    min-width: 270px;
     background-color: white;
     position: relative;
     border-radius: 30px;
     padding: 12px;
-    margin-left: -20%;
+    z-index: 200;
     box-shadow: 8px 48px 35px -10px rgba(214, 206, 219, 0.6);
 
+    @media (max-width:768px) {
+        min-width: 250px;
+        padding: 10px;
+    }
 
     &-background {
         height: 100%;
@@ -99,6 +95,10 @@ html {
             border-bottom-right-radius: 7px;
             padding: 5px;
             color: white;
+
+            @media (max-width:768px) {
+                padding: 2px;
+            }
 
             &-data {
                 width: 130px;
@@ -136,14 +136,14 @@ html {
     }
 
     .white-box {
-        height: 30px;
+        height: 28px;
         width: 50%;
         position: absolute;
         top: 20px;
         border-radius: 14px;
         background-color: white;
         margin-left: 55px;
-        margin-top: -18px;
+        margin-top: -20px;
     }
 }
 
@@ -157,7 +157,12 @@ html {
     width: 135px;
     font-weight: 500;
     line-height: 12px;
-    margin-top: 10px;
+    margin-top: 8px;
+
+    @media (max-width:768px) {
+        padding: 6px;
+        width: 125px;
+    }
 }
 
 .right-chat-box {
@@ -170,7 +175,12 @@ html {
     width: 135px;
     font-weight: 500;
     line-height: 12px;
-    margin-top: 10px;
+    margin-top: 8px;
+
+    @media (max-width:768px) {
+        padding: 6px;
+        width: 130px;
+    }
 }
 
 .left-chat-box:first-child {
@@ -187,6 +197,11 @@ html {
         border-radius: 10px;
         overflow: hidden;
 
+        @media (max-width:768px) {
+            height: 40px;
+            width: 40px;
+        }
+
         img {
             height: 100%;
             width: 100%;
@@ -201,6 +216,11 @@ html {
     border-radius: 10px;
     border-bottom-left-radius: 5px;
     margin-top: 10px;
+    padding: 10px;
+
+    @media (max-width:768px) {
+        padding: 8px;
+    }
 
     .icon {
         font-weight: 100;
@@ -230,6 +250,10 @@ html {
         margin-top: 10px;
         border: none;
         border-radius: 50px;
+
+        @media (max-width:768px) {
+            padding: 10px;
+        }
     }
 
     input::placeholder {
@@ -246,8 +270,15 @@ html {
         top: 14px;
         right: 6px;
 
+        @media (max-width:768px) {
+            height: 24px;
+            width: 24px;
+            top: 15px;
+            right: 6px;
+        }
+
         span {
-            font-size: 16px;
+            font-size: 12px;
             color: white;
         }
     }
@@ -312,23 +343,73 @@ html {
     border-bottom-right-radius: 50rem;
     transform: translateX(-18%);
     height: 85%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (max-width:1024px) {
+        height: 80%;
+    }
+
+    @media (max-width:768px) {
+        height: 75%;
+        transform: translateX(-37%);
+    }
+
+    @media (max-width:576px) {
+        width: 75%;
+        height: 60%;
+        transform: translateX(-30%);
+        border-bottom-left-radius: 0rem;
+    }
 }
 
 //Right side area
 .right-side {
     background-color: #fafafa;
+    padding-left: 210px;
+    justify-content: center;
+
+    @media (max-width:1024px) {
+        justify-content: space-evenly;
+    }
+
+    @media (max-width:768px) {
+        padding-left: 80px;
+    }
+
+    @media (max-width:576px) {
+        flex-direction: column;
+        padding-left: 0;
+    }
 }
 
 .right-content {
     max-width: 470px;
     width: 100%;
-    margin: auto;
+    margin-left: 100px;
     z-index: 200;
+
+    @media (max-width:1024px) {
+        max-width: 350px;
+        margin-left: 12px;
+    }
+
+
+    @media (max-width:576px) {
+        margin-left: 0;
+        width: 90%;
+    }
 
     h1 {
         color: hsl(271, 36%, 24%);
         font-size: 40px;
         font-weight: 500;
+
+        @media (max-width:768px) {
+            text-align: center;
+        }
+
     }
 
     P {
@@ -337,16 +418,24 @@ html {
         font-size: 17px;
         font-weight: 400;
         color: hsl(270, 7%, 64%);
+
+        @media (max-width:768px) {
+            text-align: center;
+        }
     }
 }
 
 .right-side-area {
     background-color: hsl(270, 20%, 96%);
-    width: 40%;
-    margin-top: 20%;
-    height: 100%;
+    width: 20%;
+    height: 85%;
     position: absolute;
-    right: -20%;
+    right: 0;
+    bottom: 0;
     border-top-left-radius: 50rem;
-    border-top-right-radius: 50rem;
+
+    @media (max-width:576px) {
+        width:40%;
+        height: 50%;
+        }
 }
